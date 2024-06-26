@@ -1,0 +1,102 @@
+@import "variables";
+
+.menubar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background: rgb(127, 255, 212);
+  background: radial-gradient(
+    circle,
+    rgba(127, 255, 212, 1) 0%,
+    rgba(107, 198, 168, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  margin: 0;
+  box-shadow: 0px 15px 35px -5px rgb(0, 0, 0);
+  border-bottom: 1px solid black;
+  & button {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 300px;
+    height: 60px;
+    background-color: $primary-orange;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Courier New", Courier, monospace;
+    box-shadow: 0px 7px 20px -5px rgb(0, 0, 0);
+    border-bottom: 1px solid black;
+    transition: 0.2s;
+    &:hover {
+      background-color: $primary-hvr-orange;
+    }
+  }
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  top: 5px;
+  left: 3vw;
+  animation: logo_pulse linear infinite 2s;
+}
+
+@keyframes logo_pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logout_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  right: 3vw;
+  height: 78px;
+  width: 80px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 166, 0, 0);
+  border-radius: 5px;
+  transition: 0.6s;
+}
+
+.logout_div:hover {
+  border: 1px solid rgba(108, 0, 0, 0.695);
+  background-color: rgba(167, 0, 0, 0.532);
+  cursor: pointer;
+}
+.logout_div:active {
+  border: 1px solid rgba(108, 0, 0, 0.695);
+  background-color: rgba(12, 0, 143, 0.216);
+  cursor: pointer;
+  background-color: rgba(17, 0, 205, 0.05);
+}
+
+.logout_subdiv1 {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: start;
+  margin: 0;
+}
+
+.logout_div:nth-child(2) {
+  margin: 0;
+}
+
+.logout_span {
+  font-size: 1.1rem;
+}
