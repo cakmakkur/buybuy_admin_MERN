@@ -76,6 +76,18 @@ export default function AddProd() {
     });
 
     try {
+      // await fetch(`${BASE_URL}/admin/add_prod`, {
+      //   method: "POST",
+      //   body: formData,
+      // }).then((response) => {
+      //   console.log(response.data);
+      //   if (response.status === 200) {
+      //     toast.success("Product successfully added", toastConfigs);
+      //   } else {
+      //     return toast.error("Adding new product failed", toastConfigs);
+      //   }
+      // });
+
       const response = await axiosPrivate.post(
         `${BASE_URL}/admin/add_prod`,
         formData

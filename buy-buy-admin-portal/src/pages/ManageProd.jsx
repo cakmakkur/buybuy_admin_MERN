@@ -329,6 +329,7 @@ export default function ManageProd() {
   };
 
   const handleDeleteProduct = async () => {
+    const originalProduct = prodList[editModeIndex];
     const requestOptions = {
       method: "DELETE",
       headers: {
@@ -337,7 +338,7 @@ export default function ManageProd() {
     };
 
     await fetch(
-      `${BASE_URL}/admin/manage_prods/deleteProduct/${editModeIndex}`,
+      `${BASE_URL}/admin/manage_prods/deleteProduct/${originalProduct.id}`,
       requestOptions
     )
       .then((response) => response.json())

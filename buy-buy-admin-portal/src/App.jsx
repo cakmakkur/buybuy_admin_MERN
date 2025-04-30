@@ -13,7 +13,7 @@ export default function App() {
   return (
     <AuthContextProvider>
       <Routes>
-        <Route element={<RequireAuth allowedRoles={[5151]} />}>
+        <Route element={<RequireAuth allowedRoles={[5151, 2000]} />}>
           <Route
             path="/"
             element={
